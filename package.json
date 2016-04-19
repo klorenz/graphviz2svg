@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/klorenz/js-graphviz2svg.git"
+    "url": "git+https://github.com/klorenz/graphviz2svg.git"
   },
   "keywords": [
     "graphviz",
@@ -22,7 +22,7 @@
   "author": "Kay-Uwe (Kiwi) Lorenz <kiwi@franka.dyndns.org>",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/klorenz/js-graphviz2svg/issues"
+    "url": "https://github.com/klorenz/graphviz2svg/issues"
   },
-  "homepage": "https://github.com/klorenz/js-graphviz2svg#readme"
+  "homepage": "https://github.com/klorenz/graphviz2svg#readme"
 }
