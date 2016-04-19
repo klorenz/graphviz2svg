@@ -1,6 +1,6 @@
 {
   "name": "graphviz2svg",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "GraphViz to SVG converter lib",
   "main": "index.js",
   "scripts": {
