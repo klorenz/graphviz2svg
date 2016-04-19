@@ -3,6 +3,7 @@ child = require('child_process');
 function graphviz2svg(graphtype, source, data) {
   var graphviz_font = "sans";
   var source = source;
+  var data = data || {};
 
   if (!source.match(/^\s*(di)?graph\s+\w+\s+\{/)) {
     var font = 'sans';
@@ -19,7 +20,7 @@ function graphviz2svg(graphtype, source, data) {
             + "\n}\n";
   }
 
-  result = spawnSync("dot", ["-Tsvg"], {input: source});
+  result = child.spawnSync("dot", ["-Tsvg"], {input: source});
 
   if (result.error) {
     if (result.error.errno === 'ENOENT') {
@@ -31,7 +32,7 @@ function graphviz2svg(graphtype, source, data) {
 
       throw new Error(msg);
     }
-  });
+  }
 
   output = result.stdout.toString().replace(/^<\?xml.*?\?>\s*/, '');
   output = output.replace(/^<!DOCTYPE[^>]*>\s*/, '');
@@ -59,8 +60,11 @@ if (require.main === module) {
   });
 
   process.stdin.on('end', function() {
-    if (content.match(/--/g).length > content.match(/->/g).length) {
+    if ( (content.match(/--/g) || []).length > (content.match(/->/g) || []).length) {
       process.stdout.write(graph2svg(content));
-    };
+    } else {
+      process.stdout.write(digraph2svg(content));
+    }
+    ;
   });
 }
