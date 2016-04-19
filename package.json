@@ -1,0 +1,28 @@
+{
+  "name": "graphviz2svg",
+  "version": "0.0.1",
+  "description": "GraphViz to SVG converter lib",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/klorenz/js-graphviz2svg.git"
+  },
+  "keywords": [
+    "graphviz",
+    "svg",
+    "node",
+    "markdown"
+  ],
+  "bin": {
+    "graphviz2svg": "./index.js"
+  },
+  "author": "Kay-Uwe (Kiwi) Lorenz <kiwi@franka.dyndns.org>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/klorenz/js-graphviz2svg/issues"
+  },
+  "homepage": "https://github.com/klorenz/js-graphviz2svg#readme"
+}
