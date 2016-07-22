@@ -17,7 +17,8 @@
     "markdown"
   ],
   "bin": {
-    "graphviz2svg": "./index.js"
+    "graphviz2svg": "./index.js",
+    "graphviz2svg-install-tools": "./install.js"
   },
   "author": "Kay-Uwe (Kiwi) Lorenz <kiwi@franka.dyndns.org>",
   "license": "ISC",
